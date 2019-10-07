@@ -4,6 +4,10 @@
       <i class="fa fa-fw fa-dashboard"></i>&nbsp;
       <span>{{ 'Dashboard' | translate }}</span>
     </a>
+    <a routerLink="/admin/notifications" [routerLinkActive]="['router-link-active']" class="list-group-item">
+      <i class="fa fa-bell"></i>&nbsp;
+      <span>{{ 'Notifications' | translate }}</span>
+    </a>
     <a routerLink="/admin/service-requests" [routerLinkActive]="['router-link-active']" class="list-group-item">
       <i class="fa fa-automobile"></i>&nbsp;
       <span>{{ 'Service Requests' | translate }}</span>
@@ -15,6 +19,10 @@
     <a routerLink="/admin/profile" [routerLinkActive]="['router-link-active']" class="list-group-item">
       <i class="fa fa-fw fa-user"></i>&nbsp;
       <span>{{ 'Profile' | translate }}</span>
+    </a>
+    <a class="list-group-item" (click)="onLoggedout()">
+      <i class="fa fa-sign-out"></i>&nbsp;
+      <span>{{ 'Logout' | translate }}</span>
     </a>
   </div>
   <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
